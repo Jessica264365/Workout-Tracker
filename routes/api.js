@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const db = require("../models");
-
+// route for getting the workouts and adding the total duration of time
 router.get("/api/workouts", (req, res) => {
   db.Workout.aggregate([
     {
@@ -16,9 +16,8 @@ router.get("/api/workouts", (req, res) => {
       res.status(400).json(err);
     });
 });
-
+// route for submitting a new workout
 router.post("/api/workouts", (req, res) => {
-  console.log(req);
   db.Workout.create({})
     .then((results) => {
       res.json(results);
@@ -27,6 +26,7 @@ router.post("/api/workouts", (req, res) => {
       res.status(400).json(err);
     });
 });
+//route for finding the total duration of a workout within a given range
 router.get("/api/workouts/range", (req, res) => {
   db.Workout.aggregate([
     {
@@ -43,6 +43,7 @@ router.get("/api/workouts/range", (req, res) => {
       res.status(400).json(err);
     });
 });
+//route for updating a specific workout
 router.put("/api/workouts/:id", (req, res) => {
   db.Workout.findByIdAndUpdate(
     req.params.id,
