@@ -54,7 +54,7 @@ Read up on the documentation
 
 3. Run the seed.js file in your terminal using the following command to set up the database and seed data. Make sure your terminal is connected to your local MongoDB.
 
-`npm run seed`
+   `npm run seed`
 
 4. Be sure to update the database connection with your own passwords.
 
