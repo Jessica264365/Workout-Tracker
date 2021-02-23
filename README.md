@@ -23,7 +23,7 @@
 
 This is an application that tracks a user's workouts. On the first page information about the most recent workout is displayed. The user can either add to that workout or create a new workout. When the user adds to a workout all the information is updated and displayed with the new totals for that workout. This is done using aggregation. On the dashboard page several graphs display all the workout information that is stored in the MongoDB database.
 
-![](./public/images/workout.GIF)
+![](./public/images/workout.gif)
 
 ### Built With
 
